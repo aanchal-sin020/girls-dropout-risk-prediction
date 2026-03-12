@@ -12,6 +12,16 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+st.markdown(
+    """
+    <style>
+    h1 {
+        color: #c94f7c;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Load model and scaler
 model = joblib.load("dropout_model.pkl")
@@ -104,6 +114,7 @@ if st.button("Predict Dropout Risk"):
     else:
 
         st.write("Regular monitoring recommended.")
+
 
 
 
