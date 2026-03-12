@@ -6,7 +6,7 @@ st.markdown(
     """
     <style>
     .stApp {
-        background-color: #f5f7fb;
+        background-color: #eef3ff;
     }
     </style>
     """,
@@ -104,3 +104,4 @@ if st.button("Predict Dropout Risk"):
     else:
 
         st.write("Regular monitoring recommended.")
+
