@@ -2,16 +2,15 @@ import streamlit as st
 import numpy as np
 import joblib
 
-st.markdown(
-    """
-    <style>
-    .stApp {
-        background-color: #eef3ff;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+st.markdown("""
+<style>
+h1 {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # Load model and scaler
 model = joblib.load("dropout_model.pkl")
@@ -104,4 +103,5 @@ if st.button("Predict Dropout Risk"):
     else:
 
         st.write("Regular monitoring recommended.")
+
 
