@@ -2,6 +2,17 @@ import streamlit as st
 import numpy as np
 import joblib
 
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #f5f7fb;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Load model and scaler
 model = joblib.load("dropout_model.pkl")
 scaler = joblib.load("scaler.pkl")
@@ -91,4 +102,5 @@ if st.button("Predict Dropout Risk"):
         st.write("Provide economic assistance to reduce child labor pressure.")
 
     else:
+
         st.write("Regular monitoring recommended.")
